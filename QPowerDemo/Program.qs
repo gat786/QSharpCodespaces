@@ -2,13 +2,15 @@ namespace QPowerDemo {
 
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
-    
+    //hey I'm here!
+    //hello!!
+    // let's change the variable names now
 
     @EntryPoint()
     operation HelloQ() : Unit {
         let rounds = 100;
-        mutable zc = 0;
-        mutable oc = 0;
+        mutable zeroCount = 0; // lol I don't like camelCase but still
+        mutable oneCount = 0;
 
         Message("Hello Quantum World");
 
@@ -19,17 +21,17 @@ namespace QPowerDemo {
                 let result = M(qubit);
 
                 if (result == Zero) {
-                    set zc += 1;
+                    set zeroCount += 1;
                 } else {
-                    set oc += 1;
+                    set oneCount += 1;
                     X(qubit);  // use X here or use Reset(qubit) afterwards
                 }
 
                 // Reset(qubit); if you choose not to use X before 
             }
 
-            Message($"|0> {zc}");
-            Message($"|1> {oc}");
+            Message($"|0> {zeroCount}");
+            Message($"|1> {oneCount}");
         }
     }
 }
