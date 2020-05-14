@@ -1,0 +1,5 @@
+{
+    "extensions": [
+        "quantum.quantum-devkit-vscode"
+      ],    
+}
